@@ -1,0 +1,36 @@
+plugins {
+	id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+}
+
+javafx {
+	version "15"
+  modules("javafx.controls")
+}
+
+sourceSets {
+	main {
+		output.resourcesDir = "build/classes/java/main"
+	}
+	test {
+		output.resourcesDir = "build/classes/java/test"
+	}
+}
+
+dependencies {
+	implementation 'org.jetbrains:annotations:20.1.0'
+
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+	useJUnitPlatform()
+}
