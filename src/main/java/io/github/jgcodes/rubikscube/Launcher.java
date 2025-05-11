@@ -39,7 +39,7 @@ public class Launcher extends Application {
 		Timeline timeline = new Timeline();
 		timeline.getKeyFrames().addAll(
 			new KeyFrame(Duration.seconds(2), event -> cube.apply(
-				"(R2 D R' U2 R D' R' U2 R') . (R2 D R' U2 R D' R' U2 R') . (R2 D R' U2 R D' R' U2 R')"))
+				"R U R' U' R' F R2 U' R' U' R U R' F' . R U R' U' R' F R2 U' R' U' R U R' F'"))
 		);
 		timeline.playFromStart();
 

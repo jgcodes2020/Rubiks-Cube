@@ -1,6 +1,6 @@
 plugins {
 	id 'application'
-	id 'org.openjfx.javafxplugin' version '0.0.9'
+	id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 group 'org.example'
@@ -11,8 +11,12 @@ repositories {
 }
 
 javafx {
-	version "15"
+	version "24"
   modules("javafx.controls")
+}
+
+application {
+    mainClass = 'io.github.jgcodes.rubikscube.Launcher'
 }
 
 sourceSets {
@@ -25,10 +29,7 @@ sourceSets {
 }
 
 dependencies {
-	implementation 'org.jetbrains:annotations:20.1.0'
-
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+	implementation 'org.jetbrains:annotations:26.0.1'
 }
 
 test {
